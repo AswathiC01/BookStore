@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Bookstore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section with a Card -->
+  <div class="container mt-5">
+    <div class="card">
+      <img src="https://s26162.pcdn.co/wp-content/uploads/sites/2/2022/05/Best-Reviewed-Books.jpeg" class="card-img-top" alt="Books">
+      <div class="card-body">
+        <h5 class="card-title">Welcome to the Bookstore</h5>
+        <p class="card-text">Discover the best collection of books from all genres, available at unbeatable prices.</p>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert Section -->
+  <div class="container mt-3">
+    <!-- <div class="alert alert-info" role="alert">
+      Get 10% off on your first purchase! Use code: BOOKLOVER
+    </div> -->
+  </div>
+
+  <!-- Featured Books Section -->
+  <div class="container mt-5">
+    <h3>Featured Books</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images-platform.99static.com//-tUjEZmbTnIMpiyAMy6CiS85KYY=/137x101:962x926/fit-in/500x500/projects-files/101/10168/1016819/4d520fb3-bab8-4d4a-a209-17731bb9da86.jpg" class="card-img-top" alt="Book 1">
+          <div class="card-body">
+            <h5 class="card-title">The Good Sister</h5>
+            <p class="card-text">A thrilling adventure that will keep you on the edge of your seat!</p>
+            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#buyModal">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.madrasshoppe.com/82726-large_default/the-choice-a-true-story-of-hope-edith-eger.jpg" class="card-img-top" alt="Book 2">
+          <div class="card-body">
+            <h5 class="card-title">The Choice</h5>
+            <p class="card-text">An inspiring tale of hope and courage in the face of adversity.</p>
+            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#buyModal">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://static01.nyt.com/images/2024/02/06/books/06charlotte-stein-cover/06charlotte-stein-cover-articleLarge.jpg?quality=75&auto=webp&disable=upscale" class="card-img-top" alt="Book 3">
+          <div class="card-body">
+            <h5 class="card-title">When Grumpy met Sunshine</h5>
+            <p class="card-text">A romantic journey that explores the depths of love and loss.</p>
+            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#buyModal">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="container mt-5">
+    <h3>Contact Us</h3>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Modal for Buying a Book -->
+  <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="buyModalLabel">Buy Your Book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="buyName">Your Name</label>
+              <input type="text" class="form-control" id="buyName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="buyEmail">Your Email</label>
+              <input type="email" class="form-control" id="buyEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="book">Select Book</label>
+              <select class="form-control" id="book">
+                <option>Book Title 1</option>
+                <option>Book Title 2</option>
+                <option>Book Title 3</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Bookstore. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
